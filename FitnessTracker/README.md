@@ -38,6 +38,19 @@ Entity Manager Factory
 Transaction Manager
 ===================
 - JpaTransactionManager
-	- Takes the entityManagerFactory as a re
+	- Takes the entityManagerFactory as a ref
 - Annotation driven
 - spring-tx.jar
+
+Datasoure
+=========
+- DriverManagerDataSource
+	-	spring-jdbc.jar
+- driverClassName
+	- com.mysql.jdbc.Driver
+- url
+	- jdbc:mysql://localhost:3306/fitnessTracker?autoReconnect=true
+- username
+	- root
+- password
+	- password
