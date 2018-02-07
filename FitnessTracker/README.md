@@ -64,3 +64,15 @@ JPA
 - It is no SQL
 	- Uses JPQL instead
 - Heavy focus on POJO's
+
+Entity Annotations
+==================
+- `@Entity` - Declares the object as an Entity
+- `@Table` - Describes more specific details about DB, i.e: name, schema
+- `@Id` - Identifier attribute for a simple primary key type
+- `@GeneratedValue` - Used in conjunction with @Id
+	- IDENTITY - Used to specify a database identity column
+	- AUTO - Automatically chooses an implementation based off of the underlying database
+	- SEQUENCE - Works with a sequence (if the database supports them), see
+		`@SequenceGenerator`
+	- TABLE - Specifies that a database will use an identity table and column to ensure uniqueness, see `@TableGenerator`
