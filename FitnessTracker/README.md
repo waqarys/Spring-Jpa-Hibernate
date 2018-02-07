@@ -45,7 +45,7 @@ Transaction Manager
 Datasoure
 =========
 - DriverManagerDataSource
-	-	spring-jdbc.jar
+	- spring-jdbc.jar
 - driverClassName
 	- com.mysql.jdbc.Driver
 - url
@@ -54,3 +54,13 @@ Datasoure
 	- root
 - password
 	- password
+	
+JPA
+===
+- Actually just a specification 
+- Thought of as an Object Relational Mapping tool (ORM)
+	- An ORM is an implementation of Jpa
+- A specification for accessing, persisting, and managing data between Java objects/classes and a relational database
+- It is no SQL
+	- Uses JPQL instead
+- Heavy focus on POJO's
