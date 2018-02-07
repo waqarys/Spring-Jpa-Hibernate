@@ -34,3 +34,10 @@ Entity Manager Factory
 	- Injecte Datasource if one isn't defined in the persistence unit
 	- Defines what Vendor (provider) we are using
 	- Vendor specific JPA properties
+	
+Transaction Manager
+===================
+- JpaTransactionManager
+	- Takes the entityManagerFactory as a re
+- Annotation driven
+- spring-tx.jar
