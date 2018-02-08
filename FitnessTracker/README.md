@@ -126,3 +126,21 @@ JPQL
 Query query = em.createQuery("Select g from Goal g");
 select * from goals
 ```
+
+OpenEntityManagerInViewFilter
+=============================
+- Used to fix LazyInitialization exception
+- Used to increase th length of our Jpa Session
+
+```
+<filter>
+	<filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
+	<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+</filter>
+
+<filter-mapping>
+	<filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+```
