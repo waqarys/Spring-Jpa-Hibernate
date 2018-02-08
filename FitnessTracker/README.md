@@ -144,3 +144,14 @@ OpenEntityManagerInViewFilter
 </filter-mapping>
 
 ```
+
+Projection
+==========
+- Great way to present objects to the UI
+- Objects added using JPQL syntax
+- Projection objects can be Jpa entities
+- Need a constructor for the projection
+```
+	String jpql = "Select new com.waqar.model.GoalReport(g.minutes, e.minutes, e.activity) " +
+	"from Goal g, Exercise e where g.id = e.goal.id"
+```  
