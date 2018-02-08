@@ -76,3 +76,14 @@ Entity Annotations
 	- SEQUENCE - Works with a sequence (if the database supports them), see
 		`@SequenceGenerator`
 	- TABLE - Specifies that a database will use an identity table and column to ensure uniqueness, see `@TableGenerator`
+	
+Persistence Context
+===================
+- `@PersistenceContext`
+	- Injects the Entity Manager in our code
+- `@Service`
+	- Spring service where business logic is located
+- `@Repository`
+	- Spring DAO object, where database interaction occurs
+- `@Transactional`
+	- Used to start a transaction

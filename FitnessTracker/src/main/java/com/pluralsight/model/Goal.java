@@ -1,5 +1,6 @@
 package com.pluralsight.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,9 +14,11 @@ public class Goal {
 
 	@Id
 	@GeneratedValue
+	@Column(name="GOAL_ID")
 	private Long id;
 	
 	@Range(min = 1, max = 120)
+	@Column(name="MINUTES")
 	private int minutes;
 
 	public Long getId() {
