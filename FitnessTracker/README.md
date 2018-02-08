@@ -106,3 +106,23 @@ Join Types
 @OneToMany(mappedBy="goal", cascade=CascadeType.ALL)
 private List<Exercise> exercises = new ArrayList<Exercise>();
 ```
+
+Fetch Type
+==========
+- Two fetch types :
+	- Lazy : Queries the database when that property is called
+	- Eager : Queries the database when the object is originally created
+
+```
+@OneToMany(mappedBy="goal", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+private List<Exercise> exercises = new ArrayList<Exercise>();
+```
+
+JPQL
+====
+- JPQL is not SQL
+- Centered around Objects
+```
+Query query = em.createQuery("Select g from Goal g");
+select * from goals
+```
