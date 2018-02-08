@@ -87,3 +87,22 @@ Persistence Context
 	- Spring DAO object, where database interaction occurs
 - `@Transactional`
 	- Used to start a transaction
+	
+Join Types
+==========
+- Essentially four join types:
+	- `@OneToOne`
+	- `@OneToMany`
+	- `@ManyToOne`
+	- `@ManyToMany`
+- Can be used in various configurations:
+	- Unidirectional
+	- Bidirectional
+	- Cascade 
+	
+@OneToMany
+==========
+```
+@OneToMany(mappedBy="goal", cascade=CascadeType.ALL)
+private List<Exercise> exercises = new ArrayList<Exercise>();
+```
