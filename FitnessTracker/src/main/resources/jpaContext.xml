@@ -37,8 +37,9 @@
 	<context:component-scan /> is used to determine the search of specific beans and attempt of autowiring.	 -->
 		
 	<!-- Configure the application using annotation
-		USed to activate annotations in beans already registered in the application context -->	
+		Used to activate annotations in beans already registered in the application context -->	
 	<context:annotation-config />
+	<context:component-scan base-package="com.pluralsight"/>
 	
 	<!-- 
 	org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor is automatically loaded into App Context by Spring when using annotation based configuration. One of its duties is to search the proper entity EntityManagerFactory that would provide the EntityManager for you @PersistenceContext annotated properties.
@@ -75,6 +76,16 @@
 				<entry key="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
 				<entry key="hibernate.hbm2ddl.auto" value="create" />
 				<entry key="hibernate.format_sql" value="true" />
+				<!-- <prop key="hibernate.jdbc.use_getGeneratedKeys">true</prop>
+                <prop key="hibernate.format_sql"></prop>
+                <prop key="hibernate.transaction.auto_close_session">true</prop>
+                <prop key="hibernate.transaction.flush_before_completion">true</prop>
+                <prop key="hibernate.max_fetch_depth">0</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <prop key="hibernate.cache.use_query_cache">true</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.provider_configuration_file_resource_path">classpath:ehcache.xml</prop> -->
 			</map>
 		</property>
 	</bean>
