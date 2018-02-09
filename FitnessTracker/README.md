@@ -186,10 +186,28 @@ Spring Data Jpa
 	<artifactId>spring-data-jpa</artifactId>
 	<version>1.3.0.RELEASE</version>
 	<exclusions>
-			<exclusion>
-				<groupId>org.springframework.data</groupId>
-				<artifactId>spring-aop</artifactId>
-			</exclusion>
-		</exclusions>
+		<exclusion>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-aop</artifactId>
+		</exclusion>
+	</exclusions>
 </dependency>
+```
+
+JPA Namespace
+=============
+- To aid in configuring there is a Jpa NAmespace
+
+```
+xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+```
+
+- Schema location
+```
+http://www.springframework.org/schema/data/jpa
+http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
+```
+- Jpa Repostory
+```
+<jpa:repositories base-package="com.waqar.repositories"/>
 ```
