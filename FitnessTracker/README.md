@@ -155,3 +155,16 @@ Projection
 	String jpql = "Select new com.waqar.model.GoalReport(g.minutes, e.minutes, e.activity) " +
 	"from Goal g, Exercise e where g.id = e.goal.id"
 ```  
+
+NamedQueries
+============
+- Cleaner than adhoc JPQL
+- Not required, but focuses on the domain
+- Named parameters
+```
+@NamedQueries({ 
+	@NamedQuery(name=Goal.FIND_GOAL_REPORTS, 
+	query="Select new com.waqar.model.GoalReport(g.minutes, e.minutes, e.activity) " +
+	"from Goal g, Exercise e where g.id = e.goal.id") 
+})
+```
