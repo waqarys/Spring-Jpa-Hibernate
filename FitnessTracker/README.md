@@ -168,3 +168,28 @@ NamedQueries
 	"from Goal g, Exercise e where g.id = e.goal.id") 
 })
 ```
+
+Spring Data Jpa
+===============
+- A wrapper for Jpa
+	- Need to know JPA before you can use Spring Data Jpa
+- Replaces our Repository Tier
+- Extremely powerful and eliminates boiler plate code
+- Can be extended for additional functionality
+- Need to add the spring-data-jpa jar
+- `spring-data-jpa` contains an incompatible transitive dependency
+	- Exclude spring-aop
+	
+```
+<dependency>
+	<groupId>org.springframework.data</groupId>
+	<artifactId>spring-data-jpa</artifactId>
+	<version>1.3.0.RELEASE</version>
+	<exclusions>
+			<exclusion>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-aop</artifactId>
+			</exclusion>
+		</exclusions>
+</dependency>
+```
