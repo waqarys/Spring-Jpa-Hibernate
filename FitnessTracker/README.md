@@ -211,3 +211,14 @@ http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
 ```
 <jpa:repositories base-package="com.waqar.repositories"/>
 ```
+
+Exercise Repository
+===================
+- Extends JpaRepository interface
+- Needs to know the Class it services and the ID type
+```
+@Repository("exerciseRepository")
+public interface ExerciseRepository extends JpaRepository<Exercise, Long> {
+
+}
+```

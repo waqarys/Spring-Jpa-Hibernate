@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import com.pluralsight.model.Exercise;
 
-@Repository("exerciseRepository")
-public class ExerciseRepositoryImpl implements ExerciseRepository{
+//@Repository("exerciseRepository")
+public class ExerciseRepositoryImpl /*implements ExerciseRepository*/{
 
 	@PersistenceContext
 	private EntityManager em;
