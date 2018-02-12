@@ -12,8 +12,8 @@ import org.springframework.stereotype.Repository;
 import com.pluralsight.model.Goal;
 import com.pluralsight.model.GoalReport;
 
-@Repository("goalRepository")
-public class GoalRepositoryImpl implements GoalRepository{
+//@Repository("goalRepository")
+public class GoalRepositoryImpl /*implements GoalRepository*/{
 
 	@PersistenceContext
 	private EntityManager em;
