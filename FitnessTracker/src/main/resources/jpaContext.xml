@@ -46,9 +46,15 @@
 	<jpa:repositories base-package="com.pluralsight.repositories" />
 	
 	<!-- 
-	org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor is automatically loaded into App Context by Spring when using annotation based configuration. One of its duties is to search the proper entity EntityManagerFactory that would provide the EntityManager for you @PersistenceContext annotated properties.
+	org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor is automatically loaded into App Context 
+	by Spring when using annotation based configuration. 
+	One of its duties is to search the proper entity EntityManagerFactory that would provide the EntityManager for you 
+	@PersistenceContext annotated properties.
 
-	If you have multiple EntityManagerFactory beans in you spring config/context and you have @PersistenceContext annotations without a unitName attribute (lets say you are using a framework that comes with such a bean, and you can't touch framework code), you may run into this exception: org.springframework.beans.factory.NoUniqueBeanDefinitionException.
+	If you have multiple EntityManagerFactory beans in you spring config/context and you have @PersistenceContext annotations 
+	without a unitName attribute (lets say you are using a framework that comes with such a bean, 
+	and you can't touch framework code), you may run into this exception: 
+	org.springframework.beans.factory.NoUniqueBeanDefinitionException.
 	
 	I found this workaround in case you tun into this:
 	
